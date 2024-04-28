@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+  <html lang="en">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script>$(document).ready(function() {
+            $("#survey-form").submit(function() {
+              alert("Thank You For Your Feedback");
+              document.getElementById("survey-form").reset();
+            });
+          });
+          </script>
+       
+      <title>Hotel Survey Form</title>
+      
+      <meta charset="utf-8">
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+      <meta name="description" content="A survey form used by a hotel to get the satisfaction level of visitors">
+      
+      <meta name="author" content="Edward Mc Evoy 2019">
+      
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    </head>
+    
+  <body>
+    <style>
+        .container{
+  margin-bottom:5%;
+}
+
+#form-header{
+  margin-top:5%;
+  text-align:center;
+}
+
+#form-tagline{
+  background: #ff6d00;
+  border-top-left-radius: 0.5rem;
+	border-bottom-left-radius: 0.5rem;
+  color:#ffffff;
+  margin-top:5%;
+  padding: 4%;
+  text-align:left;
+}
+
+#form-tagline .fa{
+  margin-bottom:15%;
+}
+
+#form-tagline h2 {
+  margin-bottom:15%;
+}
+
+#form-content{
+  background: #f4f4f4;
+  border-top-right-radius: 0.5rem;
+	border-bottom-right-radius:0.5rem;
+  margin-top:5%;
+  padding: 3%;
+}
+
+.form-group{
+  margin-top:5%;
+}
+
+.contact{
+	padding: 4%;
+	height: 400px;
+}
+
+.control-label{
+  font-size:16px;
+	font-weight:600;
+}
+
+div .submit-button{
+  margin-top:3%;
+  text-align:right;
+}
+
+button#submit{
+  white-space: normal;
+  width:auto;
+	background: #ff6d00;
+	color: #ffffff;
+  font-weight: 600;
+	width: 25%;
+}
+    </style>
+      
+    <div class="container"> <!-- open container -->
+       <div class="row"> <!--  open row -->
+         
+         <div id="form-header" class="col-12">
+           <h1 id="title">Liên hệ với chúng tôi nhé</h1>
+         </div>
+       </div> <!--  close row --> 
+      
+      <div class="row"> <!--  open row -->    
+          <div id="form-tagline" class="col-md-4">
+              <div class="form-tagline">
+                <ul>
+                    <p>
+                    <li><i class="fa fa-road"></i> Nguyễn Văn Bảo, quận Gò Vấp</li>
+                    <li><i class="fa fa-phone"></i> (+84) 326 486 236 </li>
+                    <li><i class="fa fa-envelope"></i> TrieuVyhotpot@gmail.com</li>
+                  </ul>
+                  
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.862665066178!2d106.68492451534025!3d10.822205292296329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528e5496d03cf%3A0xa5b8e7395ec636b9!2s12%20Nguy%E1%BB%85n%20V%C4%83n%20B%E1%BA%A3o%2C%20Ph%C6%B0%E1%BB%9Dng%204%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh%2C%20Vi%E1%BB%87t%20Nam!5e0!3m2!1sen!2sus!4v1647512345678!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+          </div>
+         
+		      <div id="form-content" class="col-md-8">
+            
+            <form id="survey-form" onsubmit="return false;"> <!-- open form -->
+                                
+                <div class="row form-group">
+                   <div class="col-sm-3">
+                    <label id="name-label" class="control-label" for="name">*Name:</label>
+                   </div>
+                  
+                   <div class="input-group col-sm-9">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon-name"><i class="fa fa-user"></i></span>
+                     </div>                   
+                     <input id="name" type="text" class="form-control" placeholder="Please Enter Your Name" name="name" required>
+                   </div>
+                </div>
+                 
+                <div class="form-group row">
+                   <div class="col-sm-3">
+                     <label id="email-label" class="control-label" for="email">*Email:</label>
+                   </div>
+                 
+                   <div class="input-group col-sm-9">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon-mail"><i class="fa fa-envelope"></i></span>
+                     </div>
+                     <input type="email" class="form-control" id="email" placeholder="Enter Your Email" name="email" pattern="^[-+.\w]{1,64}@[-.\w]{1,64}\.[-.\w]{2,6}$" required>
+                   </div>
+                </div>
+                <div class = "form-group row">
+                <div class="col-sm-3">
+                    <label id="email-label" class="control-label" for="email">*Số điện thoại:</label>
+                </div>
+                <div class="input-group col-sm-9">
+                    <div class="input-group-prepend">
+                       <span class="input-group-text" id="basic-addon-name"><i class="fa fa-user"></i></span>
+                    </div>                   
+                    <input id="name" type="text" class="form-control" placeholder="Please Enter Your Phone" name="phone" required>
+                  </div>
+               </div>
+              <div class="form-group row"> 
+                 <div class="col-sm-3">
+                   <label class="control-label" for="comment">Comments:</label>
+                 </div>
+                  
+                 <div class="input-group col-sm-9">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon-mail"><i class="fa fa-comment"></i></span>
+                     </div>
+                  <textarea class="form-control" rows="5" id="comment"></textarea>
+                 </div>  
+              </div>
+                
+              <div class="form-group row">
+                <div class="col-sm-12 submit-button">
+                  <button type="submit" id="submit" class="btn btn-default" aria-pressed="true">Submit Form</button>
+                </div>
+              </div>
+                               
+            </form> <!-- close form -->
+
+		    </div> <!-- close form content div -->
+               
+      </div> <!-- close row -->
+    </div><!--  close container -->
+    
+    <footer>
+      <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'>         
+      </script>
+    </footer>
+
+    </body>
+</html>
+</body>
+</html>

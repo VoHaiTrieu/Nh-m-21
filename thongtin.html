@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="thongtin.css">
+    <title>Trang đăng nhập</title>
+</head>
+<body>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="">
+                    <h2>Đăng Nhập</h2>
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" required>
+                        <label for="">Email</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" required>
+                        <label for="">Mật Khẩu</label>
+                    </div>
+                    <div class="forget">
+                        <label for=""><input type="checkbox">Nhớ mật khẩu  <a href="#"> Quên Mật Khẩu</a></label>
+                      
+                    </div>
+                    <button>ĐĂNG NHẬP</button>
+                    <div class="register">
+                        <p>Nếu bạn chưa có tài khoản? <a href="#"> Đăng Ký</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="login-success-message" style="display: none; text-align: center; margin-top: 20px;">Bạn đã đăng nhập thành công!</div>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("login-btn").addEventListener("click", function (event) {
+                event.preventDefault(); 
+
+                // Hiển thị thông báo "Bạn đã đăng nhập thành công"
+                document.getElementById("login-success-message").style.display = "block";
+            });
+        });
+    </script>
+</body>
+</html>

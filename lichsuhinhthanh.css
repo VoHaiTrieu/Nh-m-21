@@ -1,0 +1,127 @@
+
+* {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   outline: none;
+}
+  .container {
+    position: relative;
+    text-align: center;
+}
+
+h1{
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+.timeline-container {
+   width: 80%;
+   padding: 50px 0;
+   margin: 50px auto;
+   position: relative;
+   overflow: hidden;
+}
+
+.timeline-container:before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 50%;
+   margin-left: -1px;
+   width: 2px;
+   height: 100%;
+   background: #FFDD00;
+   z-index: 1
+}
+
+.timeline-block {
+   width: -webkit-calc(50% + 8px);
+   width: -moz-calc(50% + 8px);
+   width: calc(50% + 8px);
+   display: -webkit-box;
+   display: -webkit-flex;
+   display: -moz-box;
+   display: flex;
+   -webkit-box-pack: justify;
+   -webkit-justify-content: space-between;
+   -moz-box-pack: justify;
+   justify-content: space-between;
+   clear: both;
+}
+.text-on-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px; /* Thay đổi kích thước phù hợp */
+  color: rgb(255, 174, 0); /* Màu sắc của văn bản */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Đổ bóng cho văn bản */
+  z-index: 2; /* Đảm bảo văn bản luôn hiển thị trên ảnh */
+}
+
+.timeline-block-right {
+   float: right;
+}
+
+.timeline-block-left {
+   float: left;
+   direction: rtl
+}
+
+.marker {
+   width: 16px;
+   height: 16px;
+   border-radius: 50%;
+   border: 2px solid #FFDD00;
+   background: #FFDD00;
+   margin-top: 10px;
+   z-index: 9999
+}
+
+.timeline-content {
+   width: 95%;
+   padding: 0 15px;
+   color: #666
+}
+
+.timeline-content h3 {
+   margin-top: 5px;
+   margin-bottom: 5px;
+   font-size: 25px;
+   font-weight: 500;
+   color: orange;
+}
+
+.timeline-content span {
+   font-size: 15px;
+   color: #fc0f0f;
+}
+
+.timeline-content p {
+   font-size: 20px;
+   line-height: 1.5em;
+   word-spacing: 1px;
+   color: #000000;
+}
+
+
+@media screen and (max-width: 768px) {
+   .timeline-container:before {
+      left: 8px;
+      width: 2px;
+   }
+   .timeline-block {
+      width: 100%;
+      margin-bottom: 30px;
+   }
+   .timeline-block-right {
+      float: none;
+   }
+
+   .timeline-block-left {
+      float: none;
+      direction: ltr;
+   }
+}
